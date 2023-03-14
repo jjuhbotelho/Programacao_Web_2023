@@ -4,7 +4,7 @@ Disciplina de Programação Web
 Dev: Júlia 
 14/03/2023 
  -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -20,23 +20,29 @@ Dev: Júlia
 
     <!-- Formato para formulários// -->
     <form>
+        <!-- Adiciona rótulo para elementos do form// -->
         <label for="nickname">Nickname</label><br>
+        <!-- Input de texto// -->
         <input type="text" name="nickname"/>
 
         <p>Sua dúvida é sobre:</p>
+        <!-- Input de checkbox// -->
         <input type="checkbox" name="jogo" value="valorant">
         <label for="valorant">Valorant</label>
         <input type="checkbox" name="jogo" value="outro">
         <label for="outro">Outro</label>
 
         <p>Selecione a sua região:</p>
+        <!-- Input de radio// -->
         <input type="radio" name="regiao" value="brasil">
         <label for="brasil">Brasil</label>
         <input type="radio" name="regiao" value="outra">
         <label for="outra">Outra</label><br>
 
         <label for="agente">Selecione um agente:</label><br>
+        <!-- Tag para caixa de seleção// -->
         <select id="agente" name="agente">
+            <!-- Tag para opções da caixa de seleção// -->
             <option value="brimstone">Brimstone</option>
             <option value="phoenix">Phoenix</option>
             <option value="sage">Sage</option>
@@ -61,9 +67,10 @@ Dev: Júlia
         </select><br>
 
         <label for="message">Insira sua dúvida:</label><br>
+        <!-- Caixa de texto// -->
         <textarea name="mensagem" rows="10" cols="30"></textarea><br>
 
-
+        <!-- Botão pra enviar// -->
         <input type="submit" value="Enviar" />
     </form>
 
