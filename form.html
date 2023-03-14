@@ -1,0 +1,72 @@
+<!--
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: Júlia 
+14/03/2023 
+ -->
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Dúvidas?</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Dúvidas?</h1>
+
+    <!-- Formato para formulários// -->
+    <form>
+        <label for="nickname">Nickname</label><br>
+        <input type="text" name="nickname"/>
+
+        <p>Sua dúvida é sobre:</p>
+        <input type="checkbox" name="jogo" value="valorant">
+        <label for="valorant">Valorant</label>
+        <input type="checkbox" name="jogo" value="outro">
+        <label for="outro">Outro</label>
+
+        <p>Selecione a sua região:</p>
+        <input type="radio" name="regiao" value="brasil">
+        <label for="brasil">Brasil</label>
+        <input type="radio" name="regiao" value="outra">
+        <label for="outra">Outra</label><br>
+
+        <label for="agente">Selecione um agente:</label><br>
+        <select id="agente" name="agente">
+            <option value="brimstone">Brimstone</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="sage">Sage</option>
+            <option value="sova">Sova</option>
+            <option value="viper">Viper</option>
+            <option value="cypher">Cypher</option>
+            <option value="reyna">Reyna</option>
+            <option value="killjoy">Killjoy</option>
+            <option value="breach">Breach</option>
+            <option value="omen">Omen</option>
+            <option value="jett">Jett</option>
+            <option value="raze">Raze</option>
+            <option value="sky">Skye</option>
+            <option value="yoru">Yoru</option>
+            <option value="astra">Astra</option>
+            <option value="kayo">Kay/o</option>
+            <option value="chamber">Chamber</option>
+            <option value="neon">Neon</option>
+            <option value="fade">Fade</option>
+            <option value="harbor">Harbor</option>
+            <option value="gecko">Gecko</option>
+        </select><br>
+
+        <label for="message">Insira sua dúvida:</label><br>
+        <textarea name="mensagem" rows="10" cols="30"></textarea><br>
+
+
+        <input type="submit" value="Enviar" />
+    </form>
+
+</body>
+
+</html>
