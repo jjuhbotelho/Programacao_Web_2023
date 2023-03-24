@@ -1,3 +1,7 @@
+// Curso de Engenharia de Software - UniEVANGÉLICA 
+// Disciplina de Programação Web 
+// Dev: Júlia 
+// 24/03/2023 
 function bubbleSort(array) {
     const length = array.length;
     for (let i = 0; i < length - 1; i++) {
@@ -12,7 +16,3 @@ function bubbleSort(array) {
     }
     return array;
 }
-
-// Exemplo de uso:
-const arr = [3, 5, 1, 4, 2];
-console.log(bubbleSort(arr)); // [1, 2, 3, 4, 5]

@@ -1,3 +1,7 @@
+// Curso de Engenharia de Software - UniEVANGÉLICA 
+// Disciplina de Programação Web 
+// Dev: Júlia 
+// 24/03/2023 
 function fatorial(numero) {
     // Verifica se o número é menor que zero, pois não existe fatorial de número negativo
     if (numero < 0) {
