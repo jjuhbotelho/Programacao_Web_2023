@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>UniSoft - Home</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="./styles/menu.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/cadastro.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cdf90fa2e2.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- Menu de navegação -->
+    <ul class="navigation">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./cadastro.html">Cadastro de Pacientes</a></li>
+        <li><a href="./consulta.html">Agendamento de Consultas</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Search Bar -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Pacientes Cadastrados</h1>
+            </div>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="search" class="form-control" id="search-input" placeholder="Busque...">
+        </div>
+        <div id="datatable">
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">CPF</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Julia</td>
+                    <td>Botelho</td>
+                    <td>000.000.000-00</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Joao</td>
+                    <td>Silva</td>
+                    <td>000.000.000-01</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Joana</td>
+                    <td>Dark</td>
+                    <td>000.000.000-02</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- validação -->
+    <script src="./validacao/listagem_pacientes.js"></script>
+    <!-- mask -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+</body>
+
+</html>
