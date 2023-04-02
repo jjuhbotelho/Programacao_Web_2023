@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>UniSoft - Cadastro de Pacientes</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <link rel="stylesheet" type="text/css" href="cadastro.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cdf90fa2e2.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- Menu de navegação -->
+    <ul class="navigation">
+        <li><a href="./cadastro.html">Cadastro de Pacientes</a></li>
+        <li><a href="./consulta.html">Agendamento de Consultas</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Formulário de cadastro -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Cadastro de pacientes</h1>
+            </div>
+        </div>
+        <div id="form">
+            <form method="POST" id="form_cadastro">
+                <div class="form-group row">
+                    <div class="form-group col-md">
+                        <label for="nome">Nome</label>
+                        <input placeholder="Primeiro nome" id="nome" type="text" name="nome" class="form-control"
+                            id="nome" required />
+                    </div>
+                    <div class="form-group col-md">
+                        <label for="sobrenome">Sobrenome </label>
+                        <input placeholder="Sobrenome" type="text" name="sobrenome" class="form-control" id="sobrenome"
+                            required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-md">
+                        <label for="cpf_cnpj">CPF/CNPJ</label>
+                        <input placeholder="CPF/CNPJ" type="text" name="cpf_cnpj" class="form-control" id="cpf_cnpj"
+                            required />
+                    </div>
+
+                    <div class="form-group col-md">
+                        <label for="telefone">Telefone</label>
+                        <input placeholder="Telefone" type="tel" name="telefone" class="form-control" id="telefone"
+                            required />
+                    </div>
+
+                    <div class="form-group col-md">
+                        <label for="data_nascimento">Data de nascimento</label>
+                        <input placeholder="Data de nascimento" app-restrict-input="date" type="date"
+                            name="data_nascimento" class="form-control" id="data_nascimento" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-md">
+                        <label for="cep">CEP</label>
+                        <input placeholder="CEP" type="text" name="cep" class="form-control" id="cep" required />
+                    </div>
+
+                    <div class="form-group col-md">
+                        <label for="cidade">Cidade</label>
+                        <input placeholder="Cidade" type="text" name="cidade" class="form-control" id="cidade"
+                            required />
+                    </div>
+                    <div class="form-group col-md">
+                        <label for="estado">Estado</label>
+                        <input placeholder="Estado" type="text" name="estado" class="form-control" id="estado" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-md-9">
+                        <label for="endereco">Endereço</label>
+                        <input placeholder="Endereço" type="text" name="endereco" class="form-control" id="endereco"
+                            required />
+                    </div>
+                    <div class="form-group col-md">
+                        <label for="bairro">Bairro</label>
+                        <input placeholder="Bairro" type="text" name="bairro" class="form-control" id="bairro"
+                            required />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-primary submit">Finalizar cadastro</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- validação -->
+    <script src="validacao_cadastro.js"></script>
+    <!-- mask -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+
+    <script>
+
+        // ------------- Mask para CPF e CNPJ ------------------
+        var maskCpf_Cnpj = IMask(document.getElementById('cpf_cnpj'), {
+            mask: [
+                {
+                    mask: '000.000.000-00',
+                    maxLength: 11
+                },
+                {
+                    mask: '00.000.000/0000-00'
+                }
+            ]
+        });
+        //------------- Mask para telefone ------------------
+        var phoneMask = IMask(
+            document.getElementById('telefone'), {
+            mask: '(00) 00000-0000'
+        });
+        //------------- Mask para CEP ------------------
+        var cepMask = IMask(
+            document.getElementById('cep'), {
+            mask: '00000-000'
+        });
+    </script>
+</body>
+
+</html>

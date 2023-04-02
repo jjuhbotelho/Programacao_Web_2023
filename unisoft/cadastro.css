@@ -1,0 +1,13 @@
+.row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.row {
+    margin: 0;
+    text-align: center;
+}
+
+.button {
+    margin-top: 10px
+}
