@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model agents {
+  id            Int      @id @default(autoincrement())
+  name          String   @unique
+  current_class String
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  skills skills[]
+}
+
+model skills {
+  id         Int      @id @default(autoincrement())
+  name       String
+  keybind    String
+  cost       Int?
+  agent_id   Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  agent agents @relation(fields: [agent_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
+}
